@@ -35,6 +35,13 @@ Jason Bladt
 7. Öffnen Sie mit Ihrem Browser die URL [http://localhost:3000](http://localhost:3000)
 8. Viel Spaß :-)
 
+## Demo-Zugang
+
+```text
+Username: admin@bladt.de
+Password: testtest
+```
+
 ## Anregungen und Feedback
 
 > Ich kenne nichts Ermutigenderes als die unbestrittene Fähigkeit des Menschen,
