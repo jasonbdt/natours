@@ -12,7 +12,7 @@ dotenv.config({ path: './config.env' });
 
 const app = require('./app');
 
-const DB = process.env.DB_HOST.replace('<PASSWORD>', process.env.DB_PASSWORD);
+const DB = process.env.DB_HOST.replace('<password>', process.env.DB_PASSWORD);
 mongoose
   .connect(DB, {
     useNewUrlParser: true,
