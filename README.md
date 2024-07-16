@@ -30,9 +30,10 @@ Jason Bladt
 2. Führen Sie `npm install` aus, um die notwendigen NodeJS-Pakete zu installieren
 3. Konfigurieren Sie die Datei `config.env.example`, indem Sie die Datei in `config.env` umbenennen. Ersetzen Sie nun jeweils `HOST`, `USERNAME` und `PASSWORD` mit den Daten Ihres MongoDB-Clusters. Für den Host können Sie einfach die ConnectionURL einfügen.
 4. Führen Sie `node ./demo/import-dev-data.js --import` im Stammverzeichnis des Projektes aus, um Demo-Daten für das Projekt im MongoDB Cluster zu generieren.
-5. Starten Sie nun den lokalen NodeJS-Webserver auf Port 3000, indem Sie `npm run start` in Ihrem Terminal ausführen
-6. Öffnen Sie mit Ihrem Browser die URL [http://localhost:3000](http://localhost:3000)
-7. Viel Spaß :-)
+5. Stellen Sie sicher, dass das Paket `nodemon` installiert ist, führen Sie hierfür einfach `npm i -g nodemon` aus.
+6. Starten Sie nun den lokalen NodeJS-Webserver auf Port 3000, indem Sie `npm run start` in Ihrem Terminal ausführen
+7. Öffnen Sie mit Ihrem Browser die URL [http://localhost:3000](http://localhost:3000)
+8. Viel Spaß :-)
 
 ## Anregungen und Feedback
 
