@@ -1,2 +1,7 @@
 node_modules/
 .cache/
+public/img/users/user-*.jpeg
+
+# Ignore docker secret files
+mongodb_password.txt
+jwt_secret.txt
