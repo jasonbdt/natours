@@ -1,0 +1,43 @@
+name: natours
+
+services:
+  db:
+    image: mongo:5
+    environment:
+      MONGO_INITDB_DATABASE: natours
+      MONGO_INITDB_USER: natours
+      MONGO_INITDB_PWD_FILE: /run/secrets/mongodb_user_password
+    ports:
+      - 27017:27017
+    secrets:
+      - mongodb_user_password
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d
+      - natours_db:/data/db
+
+  natours:
+    build: .
+    image: htaccess24/natours:latest
+    env_file: config.env
+    environment:
+      DB_HOST: ${DB_HOST:-mongodb://db:27017/natours}
+      DB_PASSWORD: ${DB_PASSWORD:-/var/secrets/mongodb_user_password}
+      JWT_SECRET: ${JWT_SECRET:-/var/secrets/jwt_secret}
+    ports:
+      - 80:3000
+    secrets:
+      - mongodb_user_password
+    volumes:
+      - user_profile_photos:/src/public/img/users
+      - tour_images:/src/public/img/tours
+
+secrets:
+  mongodb_user_password:
+    file: ./mongodb_password.txt
+  jwt_secret:
+    file: ./jwt_secret.txt
+
+volumes:
+  natours_db:
+  user_profile_photos:
+  tour_images:

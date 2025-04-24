@@ -1,0 +1,14 @@
+services:
+  natours:
+    build:
+      context: .
+      target: development
+    image: htaccess24/natours-dev:latest
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./:/src
+      - node_modules:/src/node_modules
+
+volumes:
+  node_modules:
